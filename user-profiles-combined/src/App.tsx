@@ -120,6 +120,7 @@ function AppContent() {
             <Route path="/" element={<HomePage darkMode={darkMode} />} />
             <Route path="/basic" element={<BasicAssignment darkMode={darkMode} />} />
             <Route path="/advanced" element={<AdvancedAssignment darkMode={darkMode} />} />
+            <Route path="*" element={<HomePage darkMode={darkMode} />} />
           </Routes>
         </Content>
       </Layout>
