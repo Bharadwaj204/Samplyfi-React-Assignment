@@ -617,5 +617,4 @@ Your React assignment portal has been **thoroughly audited and optimized**:
 
 **⭐ Star this repository if you found it helpful!**
 
-</div>#   S a m p l y f i - R e a c t - A s s i g n m e n t  
- 
+</div>#
