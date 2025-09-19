@@ -334,7 +334,15 @@ npm run build
 
 ### 🚀 **Quick Deployment (1 minute)**
 
-**Option 1: Vercel (Recommended)**
+**Option 1: Vercel (One-Click Deploy)**
+
+[![Deploy Combined Portal](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Bharadwaj204/Samplyfi-React-Assignment&project-name=samplyfi-react-portal&root-directory=user-profiles-combined)
+
+[![Deploy Basic Assignment](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Bharadwaj204/Samplyfi-React-Assignment&project-name=samplyfi-basic-assignment&root-directory=user-profiles-basic)
+
+[![Deploy Advanced Assignment](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Bharadwaj204/Samplyfi-React-Assignment&project-name=samplyfi-advanced-assignment&root-directory=user-profiles-advanced)
+
+**Option 2: Vercel CLI**
 ```bash
 # Install Vercel CLI
 npm install -g vercel
@@ -617,5 +625,6 @@ Your React assignment portal has been **thoroughly audited and optimized**:
 
 **⭐ Star this repository if you found it helpful!**
 
-</div>#   S a m p l y f i - R e a c t - A s s i g n m e n t  
+</div>#   S a m p l y f i - R e a c t - A s s i g n m e n t 
+ 
  
