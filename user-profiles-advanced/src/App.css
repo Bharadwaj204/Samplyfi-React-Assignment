@@ -1,0 +1,314 @@
+/* Custom styles for Assignment 2 with Enhanced Features */
+
+/* Dark mode variables with GitHub-inspired colors */
+:root {
+  --bg-light: #ffffff;
+  --bg-dark: #0d1117;
+  --card-light: #ffffff;
+  --card-dark: #161b22;
+  --text-light: #24292f;
+  --text-dark: #f0f6fc;
+  --border-light: #d0d7de;
+  --border-dark: #30363d;
+  --accent-light: #0969da;
+  --accent-dark: #58a6ff;
+}
+
+body.dark-mode {
+  background-color: var(--bg-dark) !important;
+  color: var(--text-dark) !important;
+}
+
+body.dark-mode .ant-layout {
+  background-color: var(--bg-dark) !important;
+  color: var(--text-dark) !important;
+}
+
+body.dark-mode .ant-card {
+  background-color: var(--card-dark) !important;
+  border-color: var(--border-dark) !important;
+  color: var(--text-dark) !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5) !important;
+}
+
+body.dark-mode .ant-card:hover {
+  background-color: #21262d !important;
+  border-color: var(--accent-dark) !important;
+  box-shadow: 0 16px 32px rgba(0,0,0,0.7) !important;
+}
+
+body.dark-mode .ant-typography {
+  color: var(--text-dark) !important;
+}
+
+body.dark-mode .ant-typography h1 {
+  color: var(--text-dark) !important;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+body.dark-mode .ant-typography h4 {
+  color: var(--accent-dark) !important;
+}
+
+body.dark-mode .ant-input {
+  background-color: var(--card-dark) !important;
+  border-color: var(--border-dark) !important;
+  color: var(--text-dark) !important;
+}
+
+body.dark-mode .ant-input:focus,
+body.dark-mode .ant-input-focused {
+  border-color: var(--accent-dark) !important;
+  box-shadow: 0 0 0 2px rgba(88, 166, 255, 0.2) !important;
+}
+
+body.dark-mode .ant-input::placeholder {
+  color: #8b949e !important;
+}
+
+body.dark-mode .ant-btn {
+  border-color: var(--border-dark) !important;
+  color: var(--text-dark) !important;
+}
+
+body.dark-mode .ant-btn-default {
+  background-color: var(--card-dark) !important;
+  color: var(--text-dark) !important;
+}
+
+body.dark-mode .ant-btn-default:hover {
+  background-color: #21262d !important;
+  border-color: var(--accent-dark) !important;
+  color: var(--accent-dark) !important;
+}
+
+body.dark-mode .ant-btn-primary {
+  background-color: #238636 !important;
+  border-color: #238636 !important;
+}
+
+body.dark-mode .ant-btn-primary:hover {
+  background-color: #2ea043 !important;
+  border-color: #2ea043 !important;
+}
+
+body.dark-mode .ant-switch {
+  background-color: #21262d !important;
+}
+
+body.dark-mode .ant-switch-checked {
+  background-color: #238636 !important;
+}
+
+body.dark-mode .ant-badge {
+  color: var(--text-dark) !important;
+}
+
+body.dark-mode .ant-result-title {
+  color: var(--text-dark) !important;
+}
+
+body.dark-mode .ant-result-subtitle {
+  color: #8b949e !important;
+}
+
+body.dark-mode .ant-modal-content {
+  background-color: var(--card-dark) !important;
+}
+
+body.dark-mode .ant-modal-header {
+  background-color: var(--card-dark) !important;
+  border-bottom-color: var(--border-dark) !important;
+}
+
+body.dark-mode .ant-modal-title {
+  color: var(--text-dark) !important;
+}
+
+body.dark-mode .ant-form-item-label > label {
+  color: var(--text-dark) !important;
+}
+
+body.dark-mode .ant-form-item-explain-error {
+  color: #f85149 !important;
+}
+
+/* Enhanced card animations */
+.ant-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.ant-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.ant-card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.ant-card-actions {
+  border-top: 1px solid #f0f0f0;
+  background: linear-gradient(90deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+body.dark-mode .ant-card-actions {
+  border-top-color: #303030;
+  background: linear-gradient(90deg, #1f1f1f 0%, #2a2a2a 100%);
+}
+
+.ant-card-actions > li {
+  padding: 12px 0;
+}
+
+.ant-card-actions .ant-btn {
+  border: none;
+  box-shadow: none;
+  transition: all 0.2s ease;
+}
+
+.ant-card-actions .ant-btn:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+  transform: scale(1.1);
+}
+
+/* Avatar enhancements with gradient borders */
+.ant-avatar {
+  border: 3px solid transparent;
+  background: linear-gradient(45deg, #1890ff, #722ed1) padding-box,
+              linear-gradient(45deg, #1890ff, #722ed1) border-box;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.ant-avatar::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: linear-gradient(45deg, #1890ff, #722ed1);
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.ant-card:hover .ant-avatar {
+  transform: scale(1.15) rotate(8deg);
+}
+
+.ant-card:hover .ant-avatar::before {
+  opacity: 0.3;
+}
+
+body.dark-mode .ant-avatar {
+  background: linear-gradient(45deg, #58a6ff, #8b5cf6) padding-box,
+              linear-gradient(45deg, #58a6ff, #8b5cf6) border-box;
+}
+
+body.dark-mode .ant-avatar::before {
+  background: linear-gradient(45deg, #58a6ff, #8b5cf6);
+}
+
+/* Search input enhancements */
+.ant-input-affix-wrapper {
+  border-radius: 25px;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+}
+
+.ant-input-affix-wrapper:focus,
+.ant-input-affix-wrapper-focused {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.15);
+}
+
+/* Typography animations */
+.ant-typography {
+  margin-bottom: 0;
+  transition: color 0.3s ease;
+}
+
+/* Loading and transition animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ant-col {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.ant-col:nth-child(1) { animation-delay: 0.1s; }
+.ant-col:nth-child(2) { animation-delay: 0.2s; }
+.ant-col:nth-child(3) { animation-delay: 0.3s; }
+.ant-col:nth-child(4) { animation-delay: 0.4s; }
+
+/* Button pulse effect for favorites */
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.ant-btn[title*="favorite"]:hover {
+  animation: heartbeat 0.6s ease;
+}
+
+/* Switch component styling */
+.ant-switch {
+  background-color: #00b96b;
+}
+
+/* Badge styling */
+.ant-badge {
+  transition: all 0.3s ease;
+}
+
+.ant-badge:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .ant-layout-content {
+    padding: 16px !important;
+  }
+  
+  .ant-typography h1 {
+    font-size: 24px !important;
+  }
+  
+  .ant-card:hover {
+    transform: translateY(-4px) scale(1.01);
+  }
+}
+
+@media (max-width: 576px) {
+  .ant-layout-content {
+    padding: 8px !important;
+  }
+  
+  .ant-card-body {
+    padding: 16px !important;
+  }
+  
+  .ant-card:hover {
+    transform: translateY(-2px);
+  }
+}
